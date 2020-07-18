@@ -90,7 +90,7 @@ vi ~/.lotusstorage/config.toml
 # --max-parallel indicates the number of parallel sectors allowed for each worker.
 # When there is 256 GB memory, 64 GB swap and 1.4 TB hard disk free space, two sectors can be parallel.
 # When there is 128 GB memory, 64 GB swap and 0.7 TB hard disk free space, one sector can be used in parallel.
-nohup lotus-storage-miner run --max-parallel 2 > ~/miner.log 2>&1 &
+nohup lotus-storage-miner run > ~/miner.log 2>&1 &
 
 # View logs
 tail -f ~/miner.log
