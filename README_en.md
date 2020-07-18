@@ -65,7 +65,7 @@ lotus -v
 lotus version 0.4.1+git.ee7bdf38
 
 # Start lotus
-nohup lotus > ~/lotus.log 2>&1 &
+nohup lotus daemon > ~/lotus.log 2>&1 &
 
 # View logs
 tail -f ~/lotus.log
@@ -123,6 +123,13 @@ tail -f ~/miner.log
 ```
 
 Advanced: worker uses multiple SSD paths for sealing, which will also increase parallel sectors.
+
+Local : (see: https://lotu.sh/en+lotus-seal-worker)
+```
+lotus-seal-worker run --address 127.0.0.1:2345 --attach /path/to/another/ssd/directory > ~/worker.log 2>&1 &
+```
+
+Distant:
 ```
 lotus-seal-worker run --address xxx.xxx.xxx.xxx:3456 --attach /path/to/another/ssd/directory > ~/worker.log 2>&1 &
 ```
